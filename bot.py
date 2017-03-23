@@ -8,6 +8,7 @@ from functions.word_count import get_word_count
 from functions.calc import calc
 from functions.word_calc import word_calc
 from functions.moon import get_next_full_moon
+from functions.game_city import check_city
 
 logging.basicConfig(
         format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -23,6 +24,7 @@ def main():
 	dp.add_handler(CommandHandler('calc', calc))
 	dp.add_handler(CommandHandler('word', word_calc))
 	dp.add_handler(CommandHandler('moon', get_next_full_moon))
+	dp.add_handler(CommandHandler('city', check_city))
 
 
 	dp.add_error_handler(show_error)
